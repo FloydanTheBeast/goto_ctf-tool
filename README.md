@@ -1,1 +1,1 @@
-# goto_ctf-tool
+# GoTo ctf tool
