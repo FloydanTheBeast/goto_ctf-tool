@@ -1,6 +1,7 @@
-s = input()
+import sys
+s = sys.argv[1]
 
-direction = int(input())
+direction = int(sys.argv[2])
 #1 - dec to bin
 if direction == 1:
     dec = s.split(" ")
