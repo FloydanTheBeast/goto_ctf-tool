@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 site = sys.argv[1]
-sitetxt = sys.argv[2]
+sitetxt = "robots.txt"
 site_0 = ''
 slcounter = 0
 
