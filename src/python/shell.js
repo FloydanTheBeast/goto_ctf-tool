@@ -11,7 +11,6 @@ let PyShell = (name, args) => {
                 console.error(e);
                 throw e;
             }
-
             response = stdout;
         }
     )}

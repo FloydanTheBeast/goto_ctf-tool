@@ -1,3 +1,1 @@
-print('Hello')
-print('Hello')
-print('Hello motherfucker')
+print('Hello', end='')

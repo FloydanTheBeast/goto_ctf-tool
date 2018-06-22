@@ -5,8 +5,18 @@
 	--main-hover-color: #999;
 }
 
+p {
+	margin: 15px 0;
+}
+
+blockquote {
+	border-left: 4px solid var(--main-color);
+	padding: 0 20px;
+	margin: 0;
+}
+
 .container {
-	width: 100%;
+	width: 95%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas: 
@@ -20,7 +30,7 @@
 	
 }
 
-.content {
+.article {
 	grid-area: content;
 }
 
@@ -37,4 +47,15 @@ a:visited {
 a:hover {
 	color: var(--main-hover-color);
 	transition: all 0.2s 0.05s;
+}
+
+input {
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	border: 1px solid #333;
+	border-radius: 4px;
+}
+
+button {
+	font-size: 1.5rem;
 }

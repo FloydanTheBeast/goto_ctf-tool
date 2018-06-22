@@ -13,14 +13,18 @@
     "react-dom": "^16.4.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "require-all": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "server": "nodemon src/server.js"
+    "server": "nodemon src/server.js",
+    "electron": "electron .",
+    "dev": "concurrently \"yarn start\" \"yarn server\" ",
+    "dev-electron": "concurrently \"yarn start\" \"yarn server\" \"electron .\""
   },
   "devDependencies": {
     "concurrently": "^3.6.0"

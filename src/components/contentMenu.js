@@ -1,20 +1,29 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom' ;
-
 import ContentHeader from './header';
+import MenuCategory from './menuCategory';
 
-export default class ContentMenu extends Component {
+class ContentMenu extends Component {
     render() {
         return (
-            <Router>
-                <div className="content-menu">
-                    <Link to="/">
-                        <ContentHeader>Главная страница</ContentHeader>
-                    </Link>
+            <div className="content-menu">
+                <MenuCategory link="/" name="Test">
                     <ContentHeader isSub>Шифры</ContentHeader>
                     <p>Пример текста</p>
-                </div>
-            </Router>
+                </MenuCategory>
+                <MenuCategory link="/manual" name="Test">
+                    <ContentHeader isSub>Мануал</ContentHeader>
+                    <p>Пример текста</p>
+                </MenuCategory>
+            </div>
         )
     }
+
+    getContentUrls = () => {
+        
+    };
+
+    categories = {};
 }
+
+export default ContentMenu;

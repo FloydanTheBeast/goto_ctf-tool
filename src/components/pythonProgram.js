@@ -16,7 +16,7 @@ class PythonProgram extends Component {
                 <input type="text" ref={(input) => { this.textInput = input; }}
                  onChange={this.handleChange.bind(this)} />
                 <input type="text" readOnly value={this.state.data}/>
-                <button onClick={this.spawnChildProcess.bind(this)}></button>
+                <button onClick={this.spawnChildProcess.bind(this)}>Поехали</button>
             </div>
         );
     }
