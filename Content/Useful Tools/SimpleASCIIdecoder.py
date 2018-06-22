@@ -8,4 +8,4 @@ if int(sys.argv[2]) ==1:
 else:
     nm = s.split()
     for numbers in nm:
-        print(chr(int(numbers)), end=" ")
+        print(chr(int(numbers)), end="")
