@@ -11,6 +11,7 @@ export default class App extends Component {
                 <div className="content">
                     <h1>Hello React and Electron</h1>
                     <Markdown> # HELLO MARKDOWN </Markdown>
+                    <PythonProgram scriptName="SimpleASCIIdecoder"/>
                 </div>
             </div>
         );

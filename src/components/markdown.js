@@ -8,4 +8,3 @@ let Markdown = (props) => {
 };
 
 export default Markdown;
-

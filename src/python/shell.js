@@ -1,11 +1,22 @@
-module.exports = PyShell = (name) => {
-    if (name) {
-        const ChildProcess = require('child_process');
-        const path = require('path');
+const child_process = require('child_process');
+const path = require('path');
 
-        py = ChildProcess.spawn('python', [path.join(__dirname, name + '.py')]);
-        py.stdout.on('data', (data) => console.log(data.toString()));
-        py.stdout.on('end', () => console.log("YAY"));
-        return py;
-    } else console.warn("Не указано имя исполняемого файла");
+let response = '';
+
+let PyShell = (name, args) => {
+    if (name) {
+        child_process.exec('python ' + path.join(__dirname, name + '.py ') + args,
+        (e, stdout) => {
+            if (e instanceof Error) {
+                console.error(e);
+                throw e;
+            }
+
+            response = stdout;
+        }
+    )}
+    else { console.warn("Не указано имя исполняемого файла"); }
+    return response;
 }
+
+module.exports = PyShell;
