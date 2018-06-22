@@ -1,9 +1,11 @@
 import sys
 
 # полчуение сообщения
-s = sys.argv[1]
-lang = sys.argv[2].lower()
-
+st = sys.argv[1:len(sys.argv) - 1]
+lang = str(sys.argv[len(sys.argv) - 1]).lower()
+s = ""
+for i in st:
+    s += str(i) + ' '
 def_lang = s
 s = s.lower()
 
@@ -19,8 +21,11 @@ else:
 for rot in range(rots):
     print("ROT" + str(rot) + " ", end="")
     for i in range(len(s)):
-        if def_lang[i].isupper():
-            print(dct[(dct.find(s[i]) + rot) % rots].upper(), sep="", end="")
+        if s[i] != ' ':
+            if def_lang[i].isupper():
+                print(dct[(dct.find(s[i]) + rot) % rots].upper(), sep="", end="")
+            else:
+                print(dct[(dct.find(s[i]) + rot) % rots], sep="", end="")
         else:
-            print(dct[(dct.find(s[i]) + rot) % rots], sep="", end="")
+            print(" ", end="")
     print()
