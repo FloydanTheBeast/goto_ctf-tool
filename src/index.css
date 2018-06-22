@@ -1,3 +1,40 @@
-#root {
-  display: grid;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+	--main-color: #000;
+	--main-hover-color: #999;
+}
+
+.container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: 
+	  "content-menu content content content";
+	font-family: 'Open Sans', sans-serif;
+}
+
+.content-menu {
+	grid-area: content-menu;
+	text-align: center;
+	
+}
+
+.content {
+	grid-area: content;
+}
+
+a {
+	text-decoration: none;
+	color: var(--main-color)
+}
+
+a:visited {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--main-hover-color);
+	transition: all 0.2s 0.05s;
 }
